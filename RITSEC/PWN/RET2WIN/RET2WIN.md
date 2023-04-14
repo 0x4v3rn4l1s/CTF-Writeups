@@ -15,7 +15,7 @@ Are you looking for an exploit dev job. Well apply to the Republic of Potatoes. 
 
 Running basic file checks on the binary:
 
-![[Images/ret2win2.png]]
+!(Images/ret2win2.png)
 
 We can see that the file is a ==non-stripped== 64-bit executable, with minimal protections, meaning it's a no-holds-barred challenge.
 
