@@ -313,7 +313,7 @@ fgets(input, 64, stdin);
 Fun fact: `gets` is a function that is inherently dangerous and vulnerable to overflows as it reads input up to a newline character, but `fgets` fixes that by having known bounds for how many bytes to read, however it was also the downfall of the application here, as we can read much further than the buffer. But.... why is that dangerous? 
 Well, let's take a deeper look on how the stack looks
 
-![Alt text](x64_frame_nonleaf-3195248779.png)
+![Alt text](Images/x64_frame_nonleaf-3195248779.png)
 
 Our local variables are stored in lower addresses in memory, and it grows towards the RBP, and we have one very interesting value on the stack that controls code execution, __The return address__ . So if we can overflow the buffer and write to the return address that means we can redirect the code execution to the `flag` function.
 
